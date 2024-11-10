@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <!-- Travel Agency Text on the Left -->
+      <div class="logo" id="logo">
+        <h2>Travel Agency</h2>
+      </div>
+
+      <!-- Hamburger Icon on the Right -->
+      <div class="hamburger" id="hamburger-icon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Navigation Links (Hidden by default) -->
+      <div class="dropdown" id="dropdown">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Travel Agency Analytics Dashboard</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard">
+    <!-- Bookings Overview -->
+
+    <section class="card" id="bookings-overview">
+      <h2>Total Bookings</h2>
+      
+      <!-- Gauge Component -->
+      <div class="gauge-wrapper">
+        <div class="gauge four rischio3">
+          <div class="slice-colors">
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+            <div class="st slice-item"></div>
+          </div>
+          <div class="needle"></div>
+          <div class="gauge-center">
+            <div class="label">Bookings</div>
+            <div class="number" id="bookings-count"></div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Percentage Change Information -->
+      <p class="change-positive" color="#28a745">+10% since last month</p>
+    </section>
+    
+
+    <!-- Sales Overview -->
+    <section class="card" id="sales-overview">
+      <h2>Sales This Month</h2>
+      <p id="sales-amount" class="floating-number">$125,000</p>
+      <p class="change-positive" color="28a745;">+15% since last month</p>
+    </section>
+  
+    <!-- Page Interactions -->
+    <section class="card" id="interactions-overview">
+      <h2>Page Interactions</h2>
+      <canvas id="interactionChart" class="chart"></canvas>
+    </section>
+  
+    <!-- Travel Packages -->
+    <section class="card" id="packages-overview">
+      <h2>Current Packages</h2>
+      <p id="packages-count" class="floating-number">10</p>
+    </section>
+  
+    <!-- Website Traffic -->
+    <section class="card" id="traffic-overview">
+      <h2>Website Traffic</h2>
+      <canvas id="trafficChart" class="chart"></canvas>
+    </section>
+  </main>
+  
+
+  <footer>
+    <p>&copy; 2024 Travel Agency</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
